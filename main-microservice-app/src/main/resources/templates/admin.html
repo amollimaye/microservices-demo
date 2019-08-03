@@ -1,0 +1,36 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--/*/ <th:block th:include="fragments/head :: head"/> /*/-->
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="box col-md-6 col-md-offset-3">
+            <div class="okta-header">
+                <img src="img/logo.png"/>
+            </div>
+
+            <h1 th:inline="text">Hello admin!</h1>
+            <h1>Here is the pet List</h1>
+            <table class="table table-hover table-striped">
+                <thead class="thead-dark">
+                <tr>
+                    <th> Pet Name </th>
+                    <th> Pet Type </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="pet :${pets}">
+                    <td><span th:text="${pet.petName}"> Pet Name </span></td>
+                    <td><span th:text="${pet.animal}"> Animal </span></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <a href="/" class="btn btn-primary">Go Home</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
