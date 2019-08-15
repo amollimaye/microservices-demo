@@ -1,4 +1,4 @@
-package com.amol.audit.message;
+package com.pet.information.messaging;
 
 import com.service.lib.AuditInfo;
 import org.springframework.stereotype.Component;

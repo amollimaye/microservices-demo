@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact name="service-lib:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/service_lib_jar</output-path>
+    <root id="root">
+      <element id="archive" name="service-lib.jar">
+        <element id="module-output" name="service-lib" />
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -1,7 +1,5 @@
 package com.pet.information.controller;
 
-import ch.qos.logback.classic.Logger;
-import com.pet.information.messaging.AuditInfo;
 import com.pet.information.messaging.MessageSender;
 import com.pet.information.model.PetsResponse;
 import com.pet.information.processor.PetFetcher;
