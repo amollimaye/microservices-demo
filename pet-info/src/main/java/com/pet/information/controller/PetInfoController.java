@@ -1,6 +1,8 @@
 package com.pet.information.controller;
 
 import ch.qos.logback.classic.Logger;
+import com.pet.information.messaging.AuditInfo;
+import com.pet.information.messaging.MessageSender;
 import com.pet.information.model.PetsResponse;
 import com.pet.information.processor.PetFetcher;
 import org.slf4j.LoggerFactory;
@@ -18,9 +20,12 @@ public class PetInfoController {
     @Autowired
     PetFetcher petFetcher;
 
+    @Autowired
+    MessageSender messageSender;
+
     @GetMapping("/pets")
     public PetsResponse getPets(){
-        Logger.info("PETS ----");
+        messageSender.sendAuditInfoMessage("Message is /pets");
         return new PetsResponse(petFetcher.getPetList());
     }
 }

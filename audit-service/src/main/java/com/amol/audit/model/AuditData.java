@@ -16,7 +16,7 @@ public class AuditData {
     private String name;
 
     public AuditData(){
-        
+
     }
     public AuditData(String name){
         this.name = name;
